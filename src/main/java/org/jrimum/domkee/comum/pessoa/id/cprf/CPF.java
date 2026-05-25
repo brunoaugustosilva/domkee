@@ -113,7 +113,7 @@ public class CPF extends AbstractCPRF {
 		try {
 
 			this.setCodigoFormatado(format(fillWithZeroLeft(numCPF, 11)));
-			this.setCodigo(numCPF);
+			this.setCodigo(numCPF.toString());
 
 		} catch (Exception e) {
 			throw new CPFException(e);
@@ -124,7 +124,7 @@ public class CPF extends AbstractCPRF {
 		try {
 			
 			this.setCodigoFormatado(strCPF);
-			this.setCodigo(Long.parseLong(removeFormat(strCPF)));
+			this.setCodigo(removeFormat(strCPF));
 			
 		} catch (Exception e) {
 			throw new CPFException(e);
@@ -136,7 +136,7 @@ public class CPF extends AbstractCPRF {
 		try {
 			
 			this.setCodigoFormatado(format(strCPF));
-			this.setCodigo(Long.parseLong(strCPF));
+			this.setCodigo(strCPF);
 			
 		} catch (Exception e) {
 			throw new CPFException(e);

@@ -70,7 +70,7 @@ public abstract class AbstractCPRF implements CPRF{
 	/**
 	 * 
 	 */
-	private Long codigo;
+	private String codigo;
 
 	/**
 	 * 
@@ -199,11 +199,11 @@ public abstract class AbstractCPRF implements CPRF{
 		this.codigoFormatado = codigoFormatado;
 	}
 
-	protected void setCodigo(Long codigo) {
+	protected void setCodigo(String codigo) {
 
 		this.codigo = codigo;
 	}
-	public Long getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
 
